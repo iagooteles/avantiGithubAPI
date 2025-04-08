@@ -36,32 +36,33 @@ Você pode conferir o layout utilizado como referência no link abaixo:
 
 ## Estrutura do projeto
 
-busca-perfil-github/
+avantiGithubAPI/
 │
 ├── public/
-│   └── images/
+│   └── images/               
 │
 ├── src/
 │   ├── components/           # Componentes reutilizáveis
-│   │   ├── /Card
-│   │   ├── /GithubProfileTitle
-│   │   ├── /Input
-│   │   ├── /ErrorMessage     # TODO
-│   │   └── /Loader
+│   │   ├── Card/             
+│   │   ├── GithubProfileTitle/ 
+│   │   ├── Input/            
+│   │   ├── ErrorMessage/     # Exibição de erro (TODO: terminar)
+│   │   └── Loader/           # TODO:Componente de loading
 │   │
-│   ├── services/             # TODO: Módulo para chamadas à API
+│   ├── services/             # Funções para chamada à API do GitHub
 │   │   └── githubAPI.js
 │   │
-│   ├── styles/               # Estilos globais ou customizados
+│   ├── styles/               
 │   │   └── App.css
 │   │
-│   ├── App.jsx               # Componente principal da aplicação
-│   └── main.jsx              # Ponto de entrada do React
+│   ├── App.jsx               # Componente raiz
+│   └── main.jsx              # Ponto de entrada da aplicação (Vite)
 │
 ├── .gitignore
 ├── package.json
 ├── README.md
-└── vite.config.js 
+└── vite.config.js
+
 
 
 
