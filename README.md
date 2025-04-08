@@ -26,6 +26,7 @@ Você pode conferir o layout utilizado como referência no link abaixo:
 - 🎨 Estilização fiel ao layout do Figma;
 - ⏳ Feedback visual com **loading** durante a requisição;
 - ✨ Efeitos visuais para melhor experiência do usuário (UX);
+- 📱 Aplicação desenvolvida respeitando mobile-first;
 
 ---
 
@@ -40,17 +41,18 @@ Você pode conferir o layout utilizado como referência no link abaixo:
 avantiGithubAPI/
 │
 ├── public/
+│   ├── favicon/
 │   └── images/               
 │
 ├── src/
 │   ├── components/           # Componentes reutilizáveis
 │   │   ├── Card/             
+│   │   ├── ErrorMessage/     # TODO: Exibição de erro
 │   │   ├── GithubProfileTitle/ 
 │   │   ├── Input/            
-│   │   ├── ErrorMessage/     # Exibição de erro (TODO: terminar)
-│   │   └── Loader/           # TODO:Componente de loading
+│   │   └── Loader/           # TODO: Componente de loading
 │   │
-│   ├── services/             # Funções para chamada à API do GitHub
+│   ├── services/             # TODO: Funções para chamada à API do GitHub
 │   │   └── githubAPI.js
 │   │
 │   ├── styles/               
@@ -65,8 +67,6 @@ avantiGithubAPI/
 └── vite.config.js
 ```
 
-
-
 ## ▶️ Como rodar o projeto
 
 1. Clone o repositório:
@@ -74,10 +74,30 @@ avantiGithubAPI/
 git clone https://github.com/iagooteles/avantiGithubAPI.git
 ```
 
+2. Acesse a pasta do projeto e Instale as dependências:
+- Acesse a pasta do projeto:
+```bash
+cd avantiGithubAPI
+```
+
+- Instale as dependências:
+```bash
+npm install
+```
+
+3. Inicie o servidor de desenvolvimento:
+
+```bash
+npm run dev
+```
+
+4. Acesse o navegador
+Abra http://localhost:5173 para visualizar a aplicação rodando.
+
+
 ### TODOS:
 
 Video: Continuar do 5º
-Colocar a logo no title
 
 Fazer notificação quando input vazio?
 FAzer card retorno de usuario n encontrado;
