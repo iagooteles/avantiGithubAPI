@@ -36,6 +36,7 @@ Você pode conferir o layout utilizado como referência no link abaixo:
 
 ## Estrutura do projeto
 
+```bash
 avantiGithubAPI/
 │
 ├── public/
@@ -62,7 +63,7 @@ avantiGithubAPI/
 ├── package.json
 ├── README.md
 └── vite.config.js
-
+```
 
 
 
