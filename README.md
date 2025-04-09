@@ -75,7 +75,8 @@ avantiGithubAPI/
 │   │   └── useGithubSearch.js  # Vai conter a lógica de negócio da busca do API do Github
 │   │ 
 │   ├── services/
-│   │   └── githubAPI.js
+│   │   ├── githubAPI.js
+│   │   └── toastifyService.js
 │   │
 │   ├── styles/
 │   │   └── App.css
