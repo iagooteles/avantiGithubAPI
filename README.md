@@ -16,13 +16,14 @@ O objetivo deste projeto é consumir a API pública do GitHub e renderizar os da
 Essa abordagem permite que a aplicação encontre perfis mesmo quando o usuário digita o nome completo ao invés do login exato. No entanto, como o endpoint de busca retorna apenas dados resumidos, uma segunda requisição é feita ao endpoint de usuário completo para obter todas as informações necessárias, como avatar e bio.
 
 Essa lógica segue a estrutura e limitações descritas na:
-- [Documentação 1 – Get a user](https://docs.github.com/en/rest/users/users?apiVersion=2022-11-28#get-a-user)
-- [Documentação 2 – Searching users](https://docs.github.com/en/search-github/searching-on-github/searching-users#search-by-name-email-or-login)
+1. [Documentação 1 – Get a user](https://docs.github.com/en/rest/users/users?apiVersion=2022-11-28#get-a-user)
+2. [Documentação 2 – Searching users](https://docs.github.com/en/search-github/searching-on-github/searching-users#search-by-name-email-or-login)
 
 Essa lógica pode ser encontrada no arquivo [`./src/services/githubAPI.js`](./src/services/githubAPI.js).
 
 - Foi-se implementado um tempo mínimo de exibição do componente de carregamento (Loader) utilizando setTimeout. Para garantir que o feedback visual de carregamento seja sempre perceptível ao usuário, as vezes a requisição de busca da API do Github é muito rápida, evitando uma transição brusca entre os estados da interface. Isso ajuda a comunicar de forma mais clara que uma busca está sendo realizada, além de mostrar a presença da funcionalidade do Loader.
 
+- Utilizado react-toastify para feedback do usuário caso ele tente buscar um perfil com o input vazio;
 
 ## 🔗 Layout no Figma
 
@@ -63,21 +64,24 @@ avantiGithubAPI/
 │   └── images/               
 │
 ├── src/
-│   ├── components/           # Componentes reutilizáveis
+│   ├── components/             # Componentes reutilizáveis
 │   │   ├── Card/
 │   │   ├── ErrorMessage/
 │   │   ├── GithubProfileTitle/
 │   │   ├── Input/
 │   │   └── Loader/
 │   │
+│   ├── hooks/         
+│   │   └── useGithubSearch.js  # Vai conter a lógica de negócio da busca do API do Github
+│   │ 
 │   ├── services/
 │   │   └── githubAPI.js
 │   │
 │   ├── styles/
 │   │   └── App.css
 │   │
-│   ├── App.jsx               # Componente raiz
-│   └── main.jsx              # Ponto de entrada da aplicação (Vite)
+│   ├── App.jsx                 # Componente raiz
+│   └── main.jsx                # Ponto de entrada da aplicação (Vite)
 │
 ├── .gitignore
 ├── package.json
@@ -118,8 +122,6 @@ Abra http://localhost:5173 para visualizar a aplicação rodando.
 Video: Continuar do 5º
 
 clean up;
-Fazer notificação quando input vazio?
-FAzer card retorno de usuario n encontrado;
-fazer loading;
 separar funções;
 colocar catch
+olhar console;

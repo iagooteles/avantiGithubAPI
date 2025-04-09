@@ -6,10 +6,8 @@ const Input = ({ onSearch }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (inputValue.trim()) {
-      onSearch(inputValue.trim());
-      setInputValue("");
-    }
+    onSearch(inputValue.trim());
+    setInputValue("");
   };
 
   return (

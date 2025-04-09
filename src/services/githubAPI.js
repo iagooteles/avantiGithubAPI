@@ -1,4 +1,15 @@
+/**
+ * Busca um perfil do GitHub com base no nome de usuário ou nome completo.
+ *
+ * - Primeiro tenta buscar diretamente pelo nome de usuário (`/users/:username`).
+ * - Se não encontrar, faz uma busca por nome completo usando a API de search do GitHub (`/search/users?q=...`).
+ * - Se encontrar resultados, tenta buscar o perfil completo do primeiro resultado.
+ *
+ * @param {string} query - Nome de usuário ou nome completo a ser buscado.
+ * @returns {Promise<{ found: boolean, user?: Object }>} Resultado da busca contendo o perfil, se encontrado.
+ */
 export async function fetchGithubProfile(query) {
+  try {
     const response = await fetch(`https://api.github.com/users/${query}`);
   
     if (response.ok) {
@@ -20,5 +31,9 @@ export async function fetchGithubProfile(query) {
     }
 
     return { found: false };
+  } catch (error) {
+    console.error("Erro ao buscar perfil no GitHub:", error);
+    return { found: false };
+  }
 }
   
