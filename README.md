@@ -53,6 +53,7 @@ Você pode conferir o layout utilizado como referência no link abaixo:
 
 - [React](https://reactjs.org/)
 - [GitHub API](https://api.github.com/)
+- Hooks e Services;
 
 ## Estrutura do projeto
 
@@ -116,13 +117,3 @@ npm run dev
 
 4. Acesse o navegador
 Abra http://localhost:5173 para visualizar a aplicação rodando.
-
-
-### TODOS:
-
-Video: Continuar do 5º
-
-clean up;
-separar funções;
-colocar catch
-olhar console;

@@ -1,0 +1,79 @@
+.cardWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 33px;
+  padding: 0 10px;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #d9d9d9;
+  padding: 20px;
+  border-radius: 25px;
+  width: 100%;
+  max-width: 804px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profileImage {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 2px solid #005cff;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profileName {
+  font-family: "Nunito Sans", sans-serif;
+  text-transform: capitalize;
+  color: #005cff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.profileDescription {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #000;
+}
+
+@media (min-width: 768px) {
+  .cardContainer {
+    flex-direction: row;
+    align-items: center;
+    height: 257px;
+    padding: 18px 33px;
+  }
+
+  .profileImage {
+    width: 220px;
+    height: 220px;
+    margin: 0 24px 0 0;
+  }
+
+  .profileInfo {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .profileName {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .profileDescription {
+    font-size: 15px;
+  }
+}

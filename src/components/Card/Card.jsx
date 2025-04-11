@@ -1,19 +1,19 @@
 import React from "react";
-import "./Card.css";
+import styles from "./Card.module.css";
 
 const Card = ({ user }) => {
   return (
-    <section className="card-wrapper">
-      <div className="card-container">
+    <section className={styles.cardWrapper}>
+      <div className={styles.cardContainer}>
         <img
           src={user.avatar_url}
           alt={`Avatar de ${user.name}`}
           title={`Avatar de ${user.name}`}
-          className="profile-image"
+          className={styles.profileImage}
         />
-        <div className="profile-info">
-          <h2 className="profile-name">{user.name || user.login}</h2>
-          <p className="profile-description">
+        <div className={styles.profileInfo}>
+          <h2 className={styles.profileName}>{user.name || user.login}</h2>
+          <p className={styles.profileDescription}>
             {user.bio || "Bio do usuário não disponível."}
           </p>
         </div>
