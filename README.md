@@ -23,8 +23,6 @@ Essa lógica pode ser encontrada no arquivo [`./src/services/githubAPI.js`](./sr
 
 - Foi-se implementado um tempo mínimo de exibição do componente de carregamento (Loader) utilizando setTimeout. Para garantir que o feedback visual de carregamento seja sempre perceptível ao usuário, as vezes a requisição de busca da API do Github é muito rápida, evitando uma transição brusca entre os estados da interface. Isso ajuda a comunicar de forma mais clara que uma busca está sendo realizada, além de mostrar a presença da funcionalidade do Loader.
 
-- Utilizado react-toastify para feedback do usuário caso ele tente buscar um perfil com o input vazio;
-
 ## 🔗 Layout no Figma
 
 Você pode conferir o layout utilizado como referência no link abaixo:
@@ -42,6 +40,7 @@ Você pode conferir o layout utilizado como referência no link abaixo:
   - Foto de perfil;
   - Bio (biografia);
 - ❌ Mensagem de erro caso o perfil não seja encontrado;
+- ❌ Mensagem do react-toastify para feedback do usuário caso ele tente buscar um perfil com o input vazio;
 - 🎨 Estilização fiel ao layout do Figma;
 - ⏳ Feedback visual com **loading** durante a requisição;
 - ✨ Efeitos visuais para melhor experiência do usuário (UX);

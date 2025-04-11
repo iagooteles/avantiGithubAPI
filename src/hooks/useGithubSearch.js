@@ -27,7 +27,9 @@ export const useGithubSearch = () => {
     setIsLoading(true);
     setHasError(false);
 
-    setTimeout(async () => {
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+  
       const result = await fetchGithubProfile(username);
   
       if (result.found) {
@@ -36,11 +38,14 @@ export const useGithubSearch = () => {
         setUserData(null);
         setHasError(true);
       }
-
+    } catch (error) {
+      console.error(error);
+      setUserData(null);
+      setHasError(true);
+    } finally {
       setIsLoading(false);
-    }, 1000);
+    }
   };
-
   return {
     userData,
     hasError,
