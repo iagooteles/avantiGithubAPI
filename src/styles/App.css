@@ -33,6 +33,7 @@ body, html {
   z-index: 1;
   width: 100%;
   max-width: 1156px;
+  height: 537px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -48,7 +49,6 @@ body, html {
   }
   
   .app-container {
-    height: 537px;
     padding: 0;
   }
 

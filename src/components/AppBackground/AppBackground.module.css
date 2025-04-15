@@ -3,11 +3,11 @@
     width: 239px;
     height: 225px;
     top: 28px;
-    left: 151px;
+    left: 71px;
     background: url('/images/fundo-dots.png') no-repeat center/contain;
     z-index: 1;
 }
-  
+
 .gradientLeft {
     position: absolute;
     width: 400px;
@@ -41,5 +41,15 @@
         height: 888px;
         top: -268px;
         left: 806px;
+    }
+}
+
+@media (min-width: 1700px) {
+    .bgFundo {
+        left: 201px;
+    }
+
+    .gradientRight {
+        left: 1006px;
     }
 }
