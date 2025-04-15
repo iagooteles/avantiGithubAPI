@@ -1,24 +1,17 @@
 import './styles/App.css';
-import Card from './components/Card/Card';
-import GithubProfileTitle from './components/GithubProfileTitle/GithubProfileTitle';
-import Input from './components/Input/Input';
-import ErrorMessage from './components/ErrorMessage/ErrorMessage';
-import Loader from "./components/Loader/Loader";
 import { ToastContainer } from "react-toastify";
-import { useGithubSearch } from './hooks/useGithubSearch';
+import AppBackground from './components/AppBackground/AppBackground';
+import GithubSearch from './pages/GithubSearch';
 
 function App() {
-  const { userData, hasError, isLoading, handleSearch } = useGithubSearch();
-
   return (
-    <>
-      <ToastContainer />
-      <GithubProfileTitle />
-      <Input onSearch={handleSearch} />
-      {isLoading && <Loader />}
-      {hasError && <ErrorMessage />}
-      {userData && <Card user={userData} />}
-    </>
+    <div className="app-wrapper">
+      <AppBackground />
+      <div className="app-container">
+        <GithubSearch />
+        <ToastContainer />
+      </div>
+    </div>
   );
 }
 
