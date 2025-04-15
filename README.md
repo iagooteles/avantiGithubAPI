@@ -65,6 +65,7 @@ avantiGithubAPI/
 │
 ├── src/
 │   ├── components/             # Componentes reutilizáveis
+│   │   ├── AppBackground/
 │   │   ├── Card/
 │   │   ├── ErrorMessage/
 │   │   ├── GithubProfileTitle/
@@ -74,11 +75,14 @@ avantiGithubAPI/
 │   ├── hooks/         
 │   │   └── useGithubSearch.js  # Vai conter a lógica de negócio da busca do API do Github
 │   │ 
+│   ├── pages/         
+│   │   └── GithubSearch.jsx    # Contém os componentes necessários para a nossa aplicação
+│   │ 
 │   ├── services/
 │   │   ├── githubAPI.js
 │   │   └── toastifyService.js
 │   │
-│   ├── styles/
+│   ├── styles/                 # Estilos gerais da página
 │   │   └── App.css
 │   │
 │   ├── App.jsx                 # Componente raiz
