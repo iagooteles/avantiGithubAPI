@@ -2,13 +2,13 @@
   max-width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 27px;
+  margin-top: 37px;
   padding: 0 12px;
 }
 
 .inputContainer {
   position: relative;
-  width: 100%;
+  width: 503px;
   max-width: 503px;
   height: 62px;
   display: flex;
@@ -29,7 +29,7 @@
 
 .inputField::placeholder {
   color: #000;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 600;
   font-family: "Nunito Sans", sans-serif;
 }
@@ -47,4 +47,10 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .inputField::placeholder {
+    font-size: 20px;
+  }
 }

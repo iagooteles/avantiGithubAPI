@@ -1,0 +1,45 @@
+.bgFundo {
+    position: absolute;
+    width: 239px;
+    height: 225px;
+    top: 28px;
+    left: 151px;
+    background: url('/images/fundo-dots.png') no-repeat center/contain;
+    z-index: 1;
+}
+  
+.gradientLeft {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 300px;
+    left: -250px;
+    background: radial-gradient(50% 50% at 40% 50%, #005CFF 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 0;
+}
+  
+.gradientRight {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: -200px;
+    left: 70%;
+    background: radial-gradient(30% 30% at 60% 50%, #005CFF 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 0;
+}
+
+@media (min-width: 768px) {
+    .gradientLeft {
+        width: 674px;
+        height: 674px;
+        top: 198px;
+        left: -415px;
+    }
+    
+    .gradientRight {
+        width: 888px;
+        height: 888px;
+        top: -268px;
+        left: 806px;
+    }
+}

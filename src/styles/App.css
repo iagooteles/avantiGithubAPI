@@ -11,7 +11,45 @@ body, html {
 }
 
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   text-align: center;
+}
+
+.app-wrapper {
+  position: relative;
+  background-color: #1F1F1F;
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-container {
+  position: relative;
+  background-color: #000;
+  z-index: 1;
+  width: 100%;
+  max-width: 1156px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .app-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .app-container {
+    height: 537px;
+    padding: 0;
+  }
+
 }
