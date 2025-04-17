@@ -1,6 +1,6 @@
 import { toast } from 'react-toastify';
 /**
- * Exibe um toast de aviso com o estilo padrão da aplicação.
+ * Exibe um toast(feedback) de aviso com o estilo padrão da aplicação.
  *
  * @param {string} message - A mensagem a ser exibida no toast.
  */

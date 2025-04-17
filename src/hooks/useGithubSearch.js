@@ -3,7 +3,7 @@ import { fetchGithubProfile } from "../services/githubAPI";
 import { showWarningToast } from "../services/toastifyService";
 
 /**
- * Hook customizado que gerencia a busca por perfis do GitHub com base em um nome de usuário.
+ * Hook que gerencia a busca por perfis do GitHub com base em um nome de usuário.
  *
  * Realiza a requisição à API do GitHub, trata erros, controla loading e mensagens de aviso.
  *
@@ -23,15 +23,15 @@ export const useGithubSearch = () => {
       showWarningToast("Por favor, insira um nome de usuário!");
       return;
     }
-    
+
     setIsLoading(true);
     setHasError(false);
 
     try {
       await new Promise((resolve) => setTimeout(resolve, 1000));
-  
+
       const result = await fetchGithubProfile(username);
-  
+
       if (result.found) {
         setUserData(result.user);
       } else {

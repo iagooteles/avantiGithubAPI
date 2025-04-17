@@ -78,7 +78,7 @@ avantiGithubAPI/
 │   ├── pages/         
 │   │   └── GithubSearch.jsx    # Contém os componentes necessários para a nossa aplicação
 │   │ 
-│   ├── services/
+│   ├── services/               # Funções, serviços e requisições a APIs
 │   │   ├── githubAPI.js
 │   │   └── toastifyService.js
 │   │

@@ -31,4 +31,3 @@ const Input = ({ onSearch }) => {
 };
 
 export default Input;
-
